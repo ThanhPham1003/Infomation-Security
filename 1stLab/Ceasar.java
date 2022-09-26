@@ -58,12 +58,15 @@ public class Ceasar {
             else if(rus1.contains(Character.toString(c)))
             {
                 int index = rus1.indexOf(Character.toString(c));
-                c=rus1.charAt(index + k);
+
+                if((index + k) <0 ) c=rus1.charAt((index + k) +33);
+                else  c=rus1.charAt((index + k));
             }
             else if(rus2.contains(Character.toString(c)))
             {
                 int index = rus2.indexOf(Character.toString(c));
-                c=rus2.charAt(index + k);
+                if((index + k) <0 )c=rus2.charAt((index + k) +33);
+                else c=rus2.charAt(index + k);
             }
             string +=c;
         }
@@ -94,12 +97,15 @@ public class Ceasar {
             else if(rus1.contains(Character.toString(c)))
             {
                 int index = rus1.indexOf(Character.toString(c));
-                c=rus1.charAt(index + k);
+
+                if((index + k) <0 ) c=rus1.charAt((index + k) +33);
+                else  c=rus1.charAt((index + k));
             }
             else if(rus2.contains(Character.toString(c)))
             {
                 int index = rus2.indexOf(Character.toString(c));
-                c=rus2.charAt(index + k);
+                if((index + k) <0 )c=rus2.charAt((index + k) +33);
+                else c=rus2.charAt(index + k);
             }
             string += c;
         }
