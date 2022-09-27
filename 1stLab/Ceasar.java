@@ -71,6 +71,12 @@ public class Ceasar {
             string +=c;
         }
         System.out.println(str + " After decode: " + string);
+        System.out.println("The occurences of each character in cipher text: ");
+        getOccuringChar(str);
+        System.out.println("The occurences of each character in  plaintext: ");
+        getOccuringChar(string);
+
+
     }
 
     public static void Encryption(String str, int k) {
@@ -110,6 +116,31 @@ public class Ceasar {
             string += c;
         }
         System.out.println(str + " After encode: " + string);
+
+        System.out.println("The occurences of each character in plaintext: ");
+        getOccuringChar(str);
+        System.out.println("The occurences of each character in  cipher text: ");
+        getOccuringChar(string);
+    }
+    public static void getOccuringChar(String str)
+    {
+        int count[] = new int[5000];
+        int len = str.length();
+        for (int i = 0; i < len; i++)
+            count[str.charAt(i)]++;
+        char ch[] = new char[str.length()];
+        for (int i = 0; i < len; i++)
+        {
+            ch[i] = str.charAt(i);
+            int find = 0;
+            for (int j = 0; j <= i; j++)
+            {
+                if (str.charAt(i) == ch[j])
+                    find++;
+            }
+            if (find == 1)
+                System.out.println("The occurrence of "+ str.charAt(i)+ " is: " + count[str.charAt(i)]);
+        }
     }
 }
 
